@@ -20,48 +20,6 @@
     <div>
       {{content}}
     </div>
-
-    {{#author}}
-    <footer>
-      {{#if image}}
-      <figure class="desktop">
-        <img src="{{image}}" alt="Author image" />
-      </figure>
-      {{/if}}
-
-      <div>
-        <div><a href="{{url}}"><strong>{{name}}</strong></a></div>
-        {{#if bio}}<p>{{bio}}</p>{{/if}}
-      </div>
-    </footer>
-    {{/author}}
   </article>
 </main>
-
-<aside class="site-width">
-  <h6>Read more</h6>
-  {{#next_post}}
-  <a class="{{#if image}}cover" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-    <section class="post">
-      <h5>{{title}}</h5>
-      <p>{{excerpt words="19"}}&hellip;</p>
-    </section>
-  </a>
-  {{/next_post}}
-  {{#prev_post}}
-  <a class="right {{#if image}}cover" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-    <section class="post">
-      <h5>{{title}}</h5>
-      <p>{{excerpt words="19"}}&hellip;</p>
-    </section>
-  </a>
-  {{/prev_post}}
-</aside>
-
-{{!
-  Here, you can add disqus comment.
-  Also go to partials/disqus-comment to set your SHORTNAME.
-}}
-{{> loaders/load-disqus-comment}}
-
 {{/post}}

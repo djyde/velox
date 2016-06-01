@@ -4,16 +4,11 @@
     <h2><a href="{{url}}">{{{title}}}</a></h2>
   </header>
   <div>
-    <p>{{excerpt words="40"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+    <p>{{excerpt words="10"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
   </div>
   <footer>
-    {{#if author.image}}
-    <figure class="desktop">
-      <img src="{{author.image}}" alt="Foo" class="border circle" />
-    </figure>
-    {{/if}}
     <div>
-      {{author}}
+      Post
       {{tags prefix=" on "}}
       <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time>
     </div>
